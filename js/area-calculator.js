@@ -70,6 +70,7 @@ function calculateRhombusArea(){
     const width = getInputValue('rhombus-width');
     const length = getInputValue('rhombus-length');
     const area = 0.5*width*length;
+    
     setElementInnerText('rhombus-area', area);
 }
 
@@ -77,6 +78,7 @@ function calculatePentagonArea(){
     const width = getInputValue('pentagon-width');
     const length = getInputValue('pentagon-length');
     const area =0.5 *width*length;
+
     setElementInnerText('pentagon-area', area);
 }
 
@@ -84,5 +86,6 @@ function calculateEllipseArea(){
     const max_radius = getInputValue('ellipse-max-radius');
     const min_radius = getInputValue('ellipse-min-radius');
     const area = Math.PI*max_radius*min_radius;
-    setElementInnerText('ellipse-area',area);
+    const areaTwoDecimal = area.toFixed(2);
+    setElementInnerText('ellipse-area',areaTwoDecimal);
 }
